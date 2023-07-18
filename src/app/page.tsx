@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/header";
 import { metadata } from "./metadata";
-import {sui} from "@/utils/sui";
+import {sui} from "@/commons/sui";
 
 
 
