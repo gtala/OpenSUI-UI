@@ -1,8 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/header";
 import { metadata } from "./metadata";
+import {sui} from "@/utils/sui";
+
+
 
 export default function Home() {
+
+  sui()
+
+
+
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#151514]">
       <Header />
