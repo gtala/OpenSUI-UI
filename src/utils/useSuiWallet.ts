@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 export function SuiWalletConnect() {
   const { balance } = useAccountBalance()
-  const { select, address } = useWallet()
+  const { select, address, disconnect } = useWallet()
 
   useEffect(() => {
     if (address) {
@@ -29,7 +29,7 @@ export function SuiWalletConnect() {
   }
 
 
-  return { connect, address, balance }
+  return { connect, address, balance, disconnect }
 }
 
 
