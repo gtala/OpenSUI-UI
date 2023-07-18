@@ -12,7 +12,7 @@ const packageID = process.env.PACKAGE_ID!
 const adminCap = process.env.ADMIN_CAP!
 const pbtArchive = process.env.PBT_ARCHIVE!
 
-const mnemonic = Secp256k1Keypair.deriveKeypair(process.env.MNEMONIC)
+const mnemonic = Secp256k1Keypair.deriveKeypair(process.env.MNEMONIC!)
 export const addressAdmin = mnemonic.getPublicKey().toSuiAddress()
 export const signerAdmin = new RawSigner(mnemonic, provider)
 
