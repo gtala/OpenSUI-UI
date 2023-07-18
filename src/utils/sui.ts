@@ -1,9 +1,9 @@
 import { JsonRpcProvider, testnetConnection } from '@mysten/sui.js'
 
-export const sui = async (): Promise<void> => {
+export const getObjectFromAddress = async (address: string): Promise<void> => {
   const provider = new JsonRpcProvider(testnetConnection)
     //example
-  const userAddress = '0x41b01cacf53666f2dac8a3aebf7472ad5b9171a9c02ba728deb864d43f18bd9d'
+  const userAddress = address
 
   const { getObjectsByType } = getSuiObjects(provider)
   const objects = await getObjectsByType(userAddress)
