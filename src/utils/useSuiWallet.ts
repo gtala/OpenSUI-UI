@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 export function SuiWalletConnect() {
   const { balance } = useAccountBalance()
-  const { select, address, disconnect } = useWallet()
+  const { select, address, disconnect, } = useWallet()
 
   const MIST_PER_SUI = BigInt(1000000000)
   
@@ -17,7 +17,7 @@ export function SuiWalletConnect() {
   }, [address])
 
   const connectSui = async () => {
-    await select('Sui Wallet')
+    await select('Suiet')
   }
 // @ts-ignore
   const connect = async (): Promise<any> => {
@@ -31,7 +31,7 @@ export function SuiWalletConnect() {
       }
     }
   }
-  return { connect, address, balance,  disconnect, parsedBalance }
+  return { connect, address,  disconnect, parsedBalance }
 }
 
 

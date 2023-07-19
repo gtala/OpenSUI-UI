@@ -23,13 +23,17 @@ export default function Main() {
     window.location.href = `/${packageId}`;
   };
 
+  const isValidUrl = (url: string): boolean => {
+    const urlPattern: RegExp = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/i;
+    return urlPattern.test(url);
+  }
 
   const renderNfts = () => {
 
     return metadata?.length > 0 ? (
       metadata?.map(
         (data: any, index) =>
-          data.content.fields.url && (
+          data.content.fields.url && isValidUrl(data.content.fields.url) && (
             <div
               key={index}
               onClick={() => handleRedirect(data.objectId)}
