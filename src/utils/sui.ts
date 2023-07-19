@@ -11,7 +11,6 @@ export const getObjectFromAddress = async (address: string): Promise<void> => {
   for (const ownedObject of objects) {
     console.log('ownedObject', ownedObject)
   }
-
 }
 
 export function getSuiObjects(provider: JsonRpcProvider) {

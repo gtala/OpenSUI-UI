@@ -29,7 +29,7 @@ export function SuiWalletConnect() {
   }
 
 
-  return { connect, address, balance, disconnect }
+  return { connect, address, balance,  disconnect }
 }
 
 
