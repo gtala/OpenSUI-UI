@@ -25,10 +25,11 @@ export default function Main() {
 
 
   const renderNfts = () => {
+
     return metadata?.length > 0 ? (
       metadata?.map(
         (data: any, index) =>
-          data.content.fields.image_url && (
+          data.content.fields.url && (
             <div
               key={index}
               onClick={() => handleRedirect(data.objectId)}
@@ -36,8 +37,7 @@ export default function Main() {
             >
               <img
                 src={
-                  "https://ipfs.io/ipfs/" +
-                  data.content.fields.image_url.replace("ipfs://", "")
+                data.content.fields.url
                 }
                 alt="Nft Img"
                 className="rounded-xl border-[5px] fit-cover min-h-[330px]"
