@@ -32,7 +32,7 @@ export default function Details({ params }: { params: { packageId: string } }) {
               playsInline
             >
               <source
-                src="https://d3ew556gdf3fcf.cloudfront.net/videos/hero-section.mp4"
+                src={metadata[0]?.content?.fields.animation_url}
                 type="video/mp4"
               />
             </video>
