@@ -16,7 +16,7 @@ export default function Main() {
   useEffect(() => {
     if (address) {
       getAsyncObject();
-    }
+    } 
   }, [address]);
 
   const handleRedirect = (packageId: string) => {
@@ -53,11 +53,11 @@ export default function Main() {
       <div className="flex m-auto text-4xl"> NO NFT OWNED </div>
     );
   };
-  
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-24">
       <div className="w-full max-w-6xl items-start justify-between font-mono text-sm lg:flex lg:py-20 lg:flex-wrap">
-        {renderNfts()}
+        {!!address && renderNfts()}
       </div>
     </main>
   );
