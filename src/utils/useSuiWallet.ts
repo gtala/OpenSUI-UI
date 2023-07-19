@@ -6,6 +6,10 @@ export function SuiWalletConnect() {
   const { balance } = useAccountBalance()
   const { select, address, disconnect } = useWallet()
 
+  const MIST_PER_SUI = BigInt(1000000000)
+  
+  const parsedBalance = (balance! / MIST_PER_SUI).toString() 
+
   useEffect(() => {
     if (address) {
       console.log('Connected account: ', address)
@@ -27,9 +31,7 @@ export function SuiWalletConnect() {
       }
     }
   }
-
-
-  return { connect, address, balance,  disconnect }
+  return { connect, address, balance,  disconnect, parsedBalance }
 }
 
 
