@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Secp256k1Keypair, JsonRpcProvider, RawSigner, TransactionBlock, testnetConnection, SUI_CLOCK_OBJECT_ID } from '@mysten/sui.js'
 import { create_chips, getLatestDRANDBeaconValue } from '../mintCall/utils/suiHelpers'
 import * as dotenv from 'dotenv'
