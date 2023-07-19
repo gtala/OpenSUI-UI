@@ -1,4 +1,4 @@
-export const metadata =  {
+export const metadataTest =  {
     type: "0x3645d45683e8bde7608d5adc677b8301f1d053dc::std_nft::NftMeta",
     fields: {
       name: "Suiet",

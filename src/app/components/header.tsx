@@ -1,15 +1,9 @@
 "use client";
-import { getObjectFromAddress } from "@/utils/sui";
 import { SuiWalletConnect } from "@/utils/useSuiWallet";
 import { Button } from "./button";
 
 export default function Header() {
   const { connect, address, balance, disconnect } = SuiWalletConnect();
-
-  if (address) {
-    const metadata = getObjectFromAddress(address as string);
-    console.log(metadata);
-  }
 
   return (
     <div className="z-10 w-full px-12 items-center justify-between font-mono flex h-24 absolute top-0 border-b-[0.3px] border-gray-600">

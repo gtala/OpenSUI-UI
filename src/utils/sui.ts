@@ -1,6 +1,8 @@
 import { JsonRpcProvider, testnetConnection } from '@mysten/sui.js'
 
-export const getObjectFromAddress = async (address: string): Promise<void> => {
+
+
+export const getObjectsFromAddress = async (address: string): Promise<any> => {
   const provider = new JsonRpcProvider(testnetConnection)
     //example
   const userAddress = address
@@ -8,9 +10,19 @@ export const getObjectFromAddress = async (address: string): Promise<void> => {
   const { getObjectsByType } = getSuiObjects(provider)
   const objects = await getObjectsByType(userAddress)
 
-  for (const ownedObject of objects) {
-    console.log('ownedObject', ownedObject)
-  }
+  return objects
+}
+
+export const getObjectById = async (address: string, objectId: string): Promise<any> => {
+  const provider = new JsonRpcProvider(testnetConnection)
+    //example
+  const userAddress = address
+
+  const { getObjectsByType } = getSuiObjects(provider)
+  const objects = await getObjectsByType(userAddress)
+
+  const filterObject = objects.filter((data) => data.objectId === objectId).map((data) => data )
+  return filterObject
 }
 
 export function getSuiObjects(provider: JsonRpcProvider) {
