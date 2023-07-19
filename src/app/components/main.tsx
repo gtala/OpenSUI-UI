@@ -55,7 +55,7 @@ export default function Main() {
   };
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-24">
       <div className="w-full max-w-6xl items-start justify-between font-mono text-sm lg:flex lg:py-20 lg:flex-wrap">
         {renderNfts()}
       </div>

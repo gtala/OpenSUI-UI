@@ -20,8 +20,8 @@ export default function Details({ params }: { params: { packageId: string } }) {
   }, [address]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="w-full max-w-6xl items-start justify-between font-mono text-sm lg:flex lg:py-20">
+    <div className="flex min-h-screen flex-col items-center justify-between pt-24">
+      <div className="w-full max-w-6xl items-start justify-between font-mono text-sm lg:flex lg:pt-20">
         <div className="w-1/3 bg-black lg:relative">
           {metadata[0]?.content?.fields.animation_url ? (
             <video
